@@ -8,11 +8,11 @@ STEM has 950 source entries (300 beginner, 300 intermediate, 350 advanced), repr
 
 The character library uses photo-like square tiles. Create your own collections, combine HSK, STEM and personal entries, and keep a word in several collections. Open a word to save it and choose collections, select several gallery tiles to organise them together, or add your own Chinese word with pinyin and meaning. The Groups panel shows album covers and category-only practice.
 
-Normal review and reversed dictation work with all sources and custom collections. Each pass consumes its cards once, with missed words revisited on a later pass. Full Pocket practice continues into the last HSK level when the Pocket pass finishes; custom-collection practice stays within that collection. Undo also works across the Pocket-to-HSK transition. There is no daily review cap.
+Flashcards and reversed dictation work with all sources and custom collections. Each pass consumes its cards once, with missed words revisited on a later pass. Full Pocket practice continues into the last HSK level when the Pocket pass finishes; custom-collection practice stays within that collection. Undo also works across the Pocket-to-HSK transition. There is no daily review cap.
 
 The daily-use app remains at https://ckeyp8.github.io/hanzi-pocket-web/ . This preview uses its own browser-storage key, `hanzi-pocket-preview-state-v2`, and does not open the main app's vocabulary database. It reads older preview-only saves and maps the ten former HSK sample IDs and 26 former STEM IDs into the full catalogs while preserving saved terms, custom collections and learning records. Six formerly saved terms outside the official STEM list remain in Pocket and are excluded from official decks. The old key is retained for rollback. Test progress stays in the current browser and does not synchronize across devices. Use Backup in My Pocket to download a preview JSON snapshot.
 
-Open the preview in Safari on an iPhone. Select STEM Chinese or CSCA foundation, choose a level or browse all words, choose Normal or Dictation, then start. Tap to reveal; swipe left for correct or right to revisit. Listen and Slow use a Mandarin voice available on the device. If audio is unavailable, download a Mandarin voice in iPhone accessibility voice settings and retry Listen. The preview is a browser trial; it does not install its own offline service worker.
+Open the preview in Safari on an iPhone. Select STEM Chinese or CSCA foundation, choose a level or browse all words, choose Flashcards or Dictation, then start. Tap to reveal; swipe left for correct or right to revisit. Listen and Slow use a Mandarin voice available on the device. If audio is unavailable, download a Mandarin voice in iPhone accessibility voice settings and retry Listen. The preview is a browser trial; it does not install its own offline service worker.
 
 ## Listening quiz
 
@@ -25,3 +25,7 @@ Sentence generation and speech use no API keys or paid cloud service. A download
 ## Hosting
 
 Serve this directory as a static site. For GitHub Pages, select the main branch and repository root in Settings → Pages. It has no build step and no API credentials. `index.html` loads `app.js`, `quiz.js`, `style.css`, `hsk-catalog.json`, `csca-catalog.json` and `stem-data.json` (only for earlier saves), plus an optional icon library from unpkg.com. Vocabulary attribution and licenses are linked in the page footer. `icon-concepts.html` compares three ImageGen horse proposals; they have not replaced the existing app icon.
+
+## Stroke discovery update — 10 November 2026
+
+Open any word in a gallery, or reveal a practice card, then choose Strokes. Next stroke draws one additional stroke and keeps every previous stroke visible. At the end the complete character stays on screen. Reset clears the drawing; Replay animates the complete character and leaves it visible. Words with several characters have individual character tabs. The bundled data covers all HSK 1–5 characters; an unsupported additional technical/personal character shows a clear availability message. The stroke renderer and data are served locally with this preview, with Hanzi Writer MIT and stroke-data Arphic notices included. The visible mode name is Flashcards; the existing internal normal-mode storage keys remain unchanged to preserve learning records.
